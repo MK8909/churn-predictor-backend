@@ -21,8 +21,8 @@ app.add_middleware(
 )
 
 # ── Load model and encoders once at startup ──────────────────────────────────
-MODEL_PATH    = os.getenv("MODEL_PATH",   "customer_churn.pkl")
-ENCODER_PATH  = os.getenv("ENCODER_PATH", "encoders.pkl")
+MODEL_PATH    = os.getenv("MODEL_PATH",   "customer_churn_new.pkl")
+ENCODER_PATH  = os.getenv("ENCODER_PATH", "encoders_new.pkl")
 
 with open(MODEL_PATH, "rb") as f:
     model = pickle.load(f)
