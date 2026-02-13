@@ -13,12 +13,23 @@ app = FastAPI(
 )
 
 # Allow all origins (update in production to your frontend URL)
-app.add_middleware(
+'''app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
+)'''
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://churn-predictor-ai.netlify.app"
+    ],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
+
 
 # ── Load model and encoders once at startup ──────────────────────────────────
 MODEL_PATH    = os.getenv("MODEL_PATH",   "customer_churn_new.pkl")
