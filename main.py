@@ -24,7 +24,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://churn-predictor-ai.netlify.app"
+        "https://legendary-dusk-31d8b2.netlify.app/"
     ],
     allow_methods=["*"],
     allow_headers=["*"],
